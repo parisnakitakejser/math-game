@@ -7,6 +7,7 @@
 //
 
 #include "gameMenu.h"
+#include "settings.h"
 
 int menu_number;
 
@@ -84,19 +85,59 @@ void menuGameSettings(void)
     system("clear");
     printf("# Game settings #\n");
     printf("\n");
-    printf("None menu to select\n");
+    printf("[1] Difficult\n");
     printf("\n");
     printf("[0] Back to main menu\n");
     
     scanf("%d", &menu_number);
     
-    // If player want go back to main menu
-    if ( menu_number == 0 )
-        menuMain();
+    switch (menu_number) {
+        case 0: // Back to main menu
+            menuMain();
+            break;
+        
+        case 1: // Change game settings
+            menuGameSettingsDifficulty();
+            break;
+            
+        default: // Type wrong menu number
+            menuGameSettings();
+            break;
+    }
+}
+
+void menuGameSettingsDifficulty(void)
+{
+    int difficul_count;
     
-    // If player press a menu number there not exists.
-    else
+    system("clear");
+    printf("# Game settings / Difficult #\n");
+    printf("\n");
+    
+    for (difficul_count = 1; difficul_count <= MAX_DIFFICULT; difficul_count++)
+    {
+        printf("[%d] %s (%d procent)\n", difficul_count, difficulties[(difficul_count-1)].title, difficulties[(difficul_count-1)].procent);
+    }
+
+    printf("\n");
+    printf("[0] Back to game settings\n");
+    
+    scanf("%d", &menu_number);
+    
+    if ( menu_number > 1 && menu_number <= MAX_DIFFICULT )
+    {
+        printf("You have selected a new difficult");
+    }
+    else if ( menu_number == 0 )
+    {
+        // Back to game settings
         menuGameSettings();
+    }
+    else
+    {
+        // If wrong menu number pressed
+        menuGameSettingsDifficulty();
+    }
 }
 
 /*

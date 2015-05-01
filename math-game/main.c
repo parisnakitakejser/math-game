@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Paris Nakita Kejser. All rights reserved.
 //
 
+#include "settings.h"
 #include "gameMenu.h"
 
 /*
@@ -13,6 +14,10 @@
  */
 int main(void)
 {
+    setupDifficulties();
+    
+    printf("%s", difficulties[1].title);
+    
     switch (menuMain())
     {
         case 0:

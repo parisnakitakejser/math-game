@@ -13,8 +13,12 @@
 #include <stdlib.h>
 
 int menuMain(void);
+
 void menuStartNewGame(void);
+
 void menuGameSettings(void);
+void menuGameSettingsDifficulty(void);
+
 void menuHiscore(void);
 
 #endif /* defined(__math_game__gameMenu__) */
