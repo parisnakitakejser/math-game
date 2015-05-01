@@ -8,23 +8,30 @@
 
 #include "gameMenu.h"
 
-int main_return;
-
 /*
  * Starting the program and handle inputs.
  */
 int main(void)
 {
-    main_return = menuMain();
-    
-    if ( main_return == 0 )
-        return 0;
-    else if ( main_return == 1 )
-        return 1;
-    else if ( main_return == 2 )
+    switch (menuMain())
     {
-        main();
-        return 1;
+        case 0:
+            return 0;
+            break;
+            
+        case 1:
+            return 1;
+            break;
+            
+        case 2:
+            main();
+            return 1;
+            break;
+
+        default:
+            printf("menuMain() return uknome int and the game is quit.");
+            return 0;
+            break;
     }
 }
 
