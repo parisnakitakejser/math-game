@@ -108,15 +108,15 @@ void menuGameSettings(void)
 
 void menuGameSettingsDifficulty(void)
 {
-    int difficul_count;
+    int difficult_count;
     
     system("clear");
     printf("# Game settings / Difficult #\n");
     printf("\n");
     
-    for (difficul_count = 1; difficul_count <= MAX_DIFFICULT; difficul_count++)
+    for (difficult_count = 1; difficult_count <= MAX_DIFFICULT; difficult_count++)
     {
-        printf("[%d] %s (%d procent)\n", difficul_count, difficulties[(difficul_count-1)].title, difficulties[(difficul_count-1)].procent);
+        printf("[%d] %s (%d procent)\n", difficult_count, difficulties[(difficult_count-1)].title, difficulties[(difficult_count-1)].procent);
     }
 
     printf("\n");
