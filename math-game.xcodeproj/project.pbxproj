@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6E53CB071AF37D7500AF58B8 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CB061AF37D7500AF58B8 /* main.c */; };
+		6EE2F2C51AF3997F00E4A699 /* gameMenu.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2F2C31AF3997F00E4A699 /* gameMenu.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		6E53CB031AF37D7500AF58B8 /* math-game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "math-game"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E53CB061AF37D7500AF58B8 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		6EE2F2C31AF3997F00E4A699 /* gameMenu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gameMenu.c; sourceTree = "<group>"; };
+		6EE2F2C41AF3997F00E4A699 /* gameMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameMenu.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				6E53CB061AF37D7500AF58B8 /* main.c */,
+				6EE2F2C31AF3997F00E4A699 /* gameMenu.c */,
+				6EE2F2C41AF3997F00E4A699 /* gameMenu.h */,
 			);
 			path = "math-game";
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EE2F2C51AF3997F00E4A699 /* gameMenu.c in Sources */,
 				6E53CB071AF37D7500AF58B8 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +241,7 @@
 				6E53CB0C1AF37D7500AF58B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
