@@ -85,7 +85,7 @@ void menuGameSettings(void)
     system("clear");
     printf("# Game settings #\n");
     printf("\n");
-    printf("[1] Difficult\n");
+    printf("[1] Difficult (%s)\n", difficulties[(player[0].difficult)].title);
     printf("\n");
     printf("[0] Back to main menu\n");
     
@@ -126,7 +126,8 @@ void menuGameSettingsDifficulty(void)
     
     if ( menu_number > 1 && menu_number <= MAX_DIFFICULT )
     {
-        printf("You have selected a new difficult");
+        player[0].difficult = (menu_number-1);
+        menuGameSettings();
     }
     else if ( menu_number == 0 )
     {

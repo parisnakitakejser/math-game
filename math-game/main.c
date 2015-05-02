@@ -15,8 +15,7 @@
 int main(void)
 {
     setupDifficulties();
-    
-    printf("%s", difficulties[1].title);
+    setupPlayer();
     
     switch (menuMain())
     {

@@ -9,6 +9,7 @@
 #include "settings.h"
 
 Difficult *difficulties;
+Player *player;
 
 void setupDifficulties(void)
 {
@@ -28,4 +29,12 @@ void setupDifficulties(void)
     
     strcpy(difficulties[4].title, "Insane");
     difficulties[4].procent = 100;
+}
+
+// When game start up build player settings here
+void setupPlayer(void)
+{
+    player = malloc(sizeof(Player));
+    
+    player[0].difficult = 2;
 }

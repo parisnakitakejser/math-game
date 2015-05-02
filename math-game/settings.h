@@ -16,12 +16,18 @@
 #define MAX_DIFFICULT 5
 
 void setupDifficulties(void);
+void setupPlayer(void);
 
 typedef struct Difficult {
     char title[9];
     int procent;
 } Difficult;
 
+typedef struct Player {
+    int difficult;
+} Player;
+
 extern Difficult *difficulties;
+extern Player *player;
 
 #endif /* defined(__math_game__settings__) */
