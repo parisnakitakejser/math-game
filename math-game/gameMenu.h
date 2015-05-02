@@ -18,6 +18,7 @@ void menuStartNewGame(void);
 
 void menuGameSettings(void);
 void menuGameSettingsDifficulty(void);
+void menuGameSettingsPlayerName(void);
 
 void menuHiscore(void);
 

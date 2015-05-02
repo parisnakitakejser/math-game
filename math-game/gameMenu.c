@@ -9,6 +9,7 @@
 #include "gameMenu.h"
 #include "settings.h"
 
+
 int menu_number;
 
 /*
@@ -86,12 +87,14 @@ void menuGameSettings(void)
     printf("# Game settings #\n");
     printf("\n");
     printf("[1] Difficult (%s)\n", difficulties[(player[0].difficult)].title);
+    printf("[2] Player name (%s)\n", player[0].name);
     printf("\n");
     printf("[0] Back to main menu\n");
     
     scanf("%d", &menu_number);
     
-    switch (menu_number) {
+    switch (menu_number)
+    {
         case 0: // Back to main menu
             menuMain();
             break;
@@ -100,12 +103,19 @@ void menuGameSettings(void)
             menuGameSettingsDifficulty();
             break;
             
+        case 2: // Change game player
+            menuGameSettingsPlayerName();
+            break;
+            
         default: // Type wrong menu number
             menuGameSettings();
             break;
     }
 }
 
+/*
+ * Build game settings menu to change game difficulty
+ */
 void menuGameSettingsDifficulty(void)
 {
     int difficult_count;
@@ -139,6 +149,34 @@ void menuGameSettingsDifficulty(void)
         // If wrong menu number pressed
         menuGameSettingsDifficulty();
     }
+}
+
+/*
+ * Build game settings menu to change player name
+ */
+void menuGameSettingsPlayerName(void)
+{
+    char player_name[(MAX_LETTER_PLAYER_NAME_SIZE+1)];
+    
+    system("clear");
+    printf("# Game settings / Player name #\n");
+    printf("\n");
+    printf("[X] Cancel new player name\n");
+    printf("\n");
+    printf("Enter your new player name [1-32 char]: ");
+    
+    scanf("%s", player_name);
+    
+    if ( strlen(player_name) == 1 && ( player_name[0] == 'x' || player_name[0] == 'X' ) )
+    {
+       // cancel player name changes
+    }
+    else
+    {
+        strcpy(player[0].name, player_name);
+    }
+    
+    menuGameSettings();
 }
 
 /*

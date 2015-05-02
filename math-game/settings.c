@@ -37,4 +37,5 @@ void setupPlayer(void)
     player = malloc(sizeof(Player));
     
     player[0].difficult = 2;
+    strcpy(player[0].name, "Player 1");
 }

@@ -14,6 +14,7 @@
 #include <string.h>
 
 #define MAX_DIFFICULT 5
+#define MAX_LETTER_PLAYER_NAME_SIZE 32
 
 void setupDifficulties(void);
 void setupPlayer(void);
@@ -25,6 +26,7 @@ typedef struct Difficult {
 
 typedef struct Player {
     int difficult;
+    char name[(MAX_LETTER_PLAYER_NAME_SIZE+1)];
 } Player;
 
 extern Difficult *difficulties;
