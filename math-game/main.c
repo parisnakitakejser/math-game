@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 Paris Nakita Kejser. All rights reserved.
 //
 
-#include "settings.h"
+#include "game/settings.h"
+#include "game/game.h"
 #include "gameMenu.h"
 
 /*

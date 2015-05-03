@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		6E53CB071AF37D7500AF58B8 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E53CB061AF37D7500AF58B8 /* main.c */; };
 		6EE2F2C51AF3997F00E4A699 /* gameMenu.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2F2C31AF3997F00E4A699 /* gameMenu.c */; };
-		6EE2F2D21AF4A77100E4A699 /* settings.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2F2D01AF4A77100E4A699 /* settings.c */; };
+		6EE2F2FE1AF609DF00E4A699 /* game.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2F2FC1AF609DF00E4A699 /* game.c */; };
+		6EE2F3011AF60A1E00E4A699 /* settings.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2F2FF1AF60A1E00E4A699 /* settings.c */; };
+		6EE2F3051AF60D8500E4A699 /* levels.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2F3031AF60D8500E4A699 /* levels.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +31,12 @@
 		6E53CB061AF37D7500AF58B8 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		6EE2F2C31AF3997F00E4A699 /* gameMenu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gameMenu.c; sourceTree = "<group>"; };
 		6EE2F2C41AF3997F00E4A699 /* gameMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameMenu.h; sourceTree = "<group>"; };
-		6EE2F2D01AF4A77100E4A699 /* settings.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = settings.c; sourceTree = "<group>"; };
-		6EE2F2D11AF4A77100E4A699 /* settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settings.h; sourceTree = "<group>"; };
+		6EE2F2FC1AF609DF00E4A699 /* game.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = game.c; path = game/game.c; sourceTree = "<group>"; };
+		6EE2F2FD1AF609DF00E4A699 /* game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = game.h; path = game/game.h; sourceTree = "<group>"; };
+		6EE2F2FF1AF60A1E00E4A699 /* settings.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = settings.c; path = game/settings.c; sourceTree = "<group>"; };
+		6EE2F3001AF60A1E00E4A699 /* settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = settings.h; path = game/settings.h; sourceTree = "<group>"; };
+		6EE2F3031AF60D8500E4A699 /* levels.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = levels.c; path = levels/levels.c; sourceTree = "<group>"; };
+		6EE2F3041AF60D8500E4A699 /* levels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = levels.h; path = levels/levels.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 		6E53CB051AF37D7500AF58B8 /* math-game */ = {
 			isa = PBXGroup;
 			children = (
+				6EE2F2FB1AF609AB00E4A699 /* levels */,
 				6EE2F2CF1AF4A75D00E4A699 /* game */,
 				6E53CB061AF37D7500AF58B8 /* main.c */,
 				6EE2F2C31AF3997F00E4A699 /* gameMenu.c */,
@@ -74,10 +81,21 @@
 		6EE2F2CF1AF4A75D00E4A699 /* game */ = {
 			isa = PBXGroup;
 			children = (
-				6EE2F2D01AF4A77100E4A699 /* settings.c */,
-				6EE2F2D11AF4A77100E4A699 /* settings.h */,
+				6EE2F2FF1AF60A1E00E4A699 /* settings.c */,
+				6EE2F3001AF60A1E00E4A699 /* settings.h */,
+				6EE2F2FC1AF609DF00E4A699 /* game.c */,
+				6EE2F2FD1AF609DF00E4A699 /* game.h */,
 			);
 			name = game;
+			sourceTree = "<group>";
+		};
+		6EE2F2FB1AF609AB00E4A699 /* levels */ = {
+			isa = PBXGroup;
+			children = (
+				6EE2F3031AF60D8500E4A699 /* levels.c */,
+				6EE2F3041AF60D8500E4A699 /* levels.h */,
+			);
+			name = levels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,9 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EE2F3011AF60A1E00E4A699 /* settings.c in Sources */,
 				6EE2F2C51AF3997F00E4A699 /* gameMenu.c in Sources */,
+				6EE2F2FE1AF609DF00E4A699 /* game.c in Sources */,
+				6EE2F3051AF60D8500E4A699 /* levels.c in Sources */,
 				6E53CB071AF37D7500AF58B8 /* main.c in Sources */,
-				6EE2F2D21AF4A77100E4A699 /* settings.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

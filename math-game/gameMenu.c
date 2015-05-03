@@ -6,8 +6,10 @@
 //  Copyright (c) 2015 Paris Nakita Kejser. All rights reserved.
 //
 
+#include "game/settings.h"
+#include "game/game.h"
+#include "levels/levels.h"
 #include "gameMenu.h"
-#include "settings.h"
 
 
 int menu_number;
@@ -60,6 +62,8 @@ int menuMain(void)
  */
 void menuStartNewGame(void)
 {
+    prepareGameStart();
+    
     system("clear");
     printf("# Start new game #\n");
     printf("\n");
@@ -67,15 +71,7 @@ void menuStartNewGame(void)
     printf("\n");
     printf("[0] Back to main menu\n");
     
-    scanf("%d", &menu_number);
-    
-    // If player want go back to main menu
-    if ( menu_number == 0 )
-        menuMain();
-    
-    // If player press a menu number there not exists.
-    else
-        menuStartNewGame();
+    runGame();
 }
 
 /*
